@@ -1,4 +1,28 @@
 <app-header></app-header>
-<h1>User Json Data</h1>
-<pre>{{users | json}}</pre>
+
+
+<router-outlet></router-outlet>
+
+<div class="content">
+    <h1>Profile</h1>
+    <div class="cards" fxLayout="row wrap" fxLayoutGap="20px">
+        <div fxFlex="31%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let user of users">
+            
+              <mat-card class="example-card">
+                <mat-card-title-group>
+                    <div>
+                        <img class="Avtar" mat-card-xl-image src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" >
+                    </div>
+                    <div>
+                  <mat-card-title>{{user.name}}</mat-card-title>
+                  <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+                  <button routerLink="./profile">View Profile</button>
+                    </div>
+                </mat-card-title-group>
+              </mat-card>
+        </div>
+    </div>
+</div>
+
+
 <app-footer></app-footer>

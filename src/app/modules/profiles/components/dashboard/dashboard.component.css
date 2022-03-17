@@ -1,0 +1,16 @@
+.content{
+    background: gold;
+}
+.cards{
+    
+}
+.example-card {
+    max-width: 400px;
+    margin: 10px;
+    background: rgb(69, 182, 235);
+  }
+
+  .Avtar{
+    height: 137px;
+    width: 154px;
+  }

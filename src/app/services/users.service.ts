@@ -1,5 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+import { Observable } from 'rxjs';
+
+interface User{
+name: string,
+username:string,
+email:string
+
+}
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +16,7 @@ export class UsersService {
 
   constructor(public http:HttpClient) { }
 
-  getUsers(){
-    return this.http.get('http://jsonplaceholder.typicode.com/users');
+  getUsers():Observable<User>{
+    return this.http.get<User>('http://jsonplaceholder.typicode.com/users');
   }
 }
