@@ -6,6 +6,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProfileComponent } from './components/profile/profile.component';
 
@@ -22,6 +25,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     ProfilesRoutingModule,
     MatCardModule,
     FlexLayoutModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatTabsModule
   ]
 })
 export class ProfilesModule { }

@@ -10,7 +10,21 @@
     background: rgb(69, 182, 235);
   }
 
-  .Avtar{
-    height: 137px;
-    width: 154px;
-  }
+
+.Avtar{
+    height: 148px;
+    width: 128px;
+}
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+}
+.part1{
+    width: 35%;
+}
+.part2{
+    width: 65%;
+}

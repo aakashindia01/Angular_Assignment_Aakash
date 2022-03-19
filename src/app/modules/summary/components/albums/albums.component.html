@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link routerLink="/profile/3/summary">Profile Details</a>
+    <a mat-tab-link routerLink="/profile/3/albums">User Albums</a>
+    <a mat-tab-link routerLink="/profile/3/posts">Posts</a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+<div>
+  <h1>Albums</h1>
+  <pre>{{data|json}}</pre>
+</div>
+<div>
+
+<app-footer></app-footer>

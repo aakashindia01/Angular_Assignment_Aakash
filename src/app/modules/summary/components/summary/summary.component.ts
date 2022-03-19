@@ -1,16 +1,15 @@
-import { dashCaseToCamelCase } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {UsersService} from '../../../../services/users.service';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  selector: 'app-summary',
+  templateUrl: './summary.component.html',
+  styleUrls: ['./summary.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class SummaryComponent implements OnInit {
 
-  data:any
+data:any
   id:any
 
   constructor(private route:ActivatedRoute,
@@ -27,7 +26,5 @@ export class ProfileComponent implements OnInit {
       console.log(this.data)
     })
   }
- 
-
 
 }

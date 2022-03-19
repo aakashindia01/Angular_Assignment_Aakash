@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './gaurds/auth.guard';
+import { ProfileComponent } from './modules/profiles/components/profile/profile.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {path:'login', component:LoginComponent, pathMatch:'full'},
   
   {path:'profiles', 
@@ -13,6 +14,14 @@ const routes: Routes = [
   loadChildren: ()=> 
   import('./modules/profiles/profiles.module')
   .then((m)=>m.ProfilesModule),},
+
+  {path:'profile/:id', 
+  loadChildren: ()=> 
+  import('./modules/summary/summary.module')
+  .then((m)=>m.SummaryModule),},
+
+  // {path:'profile/:id', component:ProfileComponent},
+
   {path: '**', component:NotFoundComponent},
 ];
 
