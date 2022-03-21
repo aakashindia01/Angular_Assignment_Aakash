@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(user: any, searchValue:string) {
-    if(user.length===0){
+    if(user.length===0 || searchValue===''){
       return user;
     }
 

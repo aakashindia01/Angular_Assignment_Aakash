@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SummaryRoutingModule } from './summary-routing.module';
 import { SummaryComponent } from './components/summary/summary.component';
 import { PostsComponent } from './components/posts/posts.component';

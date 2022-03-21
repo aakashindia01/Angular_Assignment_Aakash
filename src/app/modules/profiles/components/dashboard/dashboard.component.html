@@ -9,7 +9,7 @@
     <div class="form-controls"><input class="search" [(ngModel)]="searchValue" name="searchValue" type="search" placeholder="  search name, email, or company" aria-label="Search"></div>
   </div>
     <div class="cards" fxLayout="row wrap" fxLayoutGap="grid 10px">
-        <div fxFlex="31%" fxFlex.sm="48%"  fxFlex.xs="100%" *ngFor="let user of users  ">
+        <div fxFlex="31%" fxFlex.sm="48%"  fxFlex.xs="100%" *ngFor="let user of users | filter:searchValue ">
             
               <mat-card class="example-card">
                 <mat-card-title-group>

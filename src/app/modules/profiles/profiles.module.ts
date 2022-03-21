@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
 
 
 
@@ -20,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
+    FilterPipe
  
   ],
   imports: [
