@@ -28,3 +28,29 @@
 .part2{
     width: 65%;
 }
+.form-controls{
+    display: inline;
+
+}
+
+.mainHeading{
+    margin-left: 25px;
+    display: inline;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+.form-controls{
+    margin-left: auto;
+}
+
+.search{
+    border-radius: 25px;
+    width: 400px;
+    margin-right: 40px;
+    height: 35px;
+}
+

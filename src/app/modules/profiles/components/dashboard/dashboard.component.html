@@ -4,9 +4,12 @@
 <router-outlet></router-outlet>
 
 <div class="content">
-    <h1>Profile</h1>
-    <div class="cards" fxLayout="row wrap" fxLayoutGap="10px">
-        <div fxFlex="31%" fxFlex.sm="48%"  fxFlex.xs="100%" *ngFor="let user of users">
+  <div class="main">
+    <h1 class="mainHeading" >Profile</h1>
+    <div class="form-controls"><input class="search" [(ngModel)]="searchValue" name="searchValue" type="search" placeholder="  search name, email, or company" aria-label="Search"></div>
+  </div>
+    <div class="cards" fxLayout="row wrap" fxLayoutGap="grid 10px">
+        <div fxFlex="31%" fxFlex.sm="48%"  fxFlex.xs="100%" *ngFor="let user of users  ">
             
               <mat-card class="example-card">
                 <mat-card-title-group>

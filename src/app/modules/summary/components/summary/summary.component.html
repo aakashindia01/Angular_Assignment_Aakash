@@ -1,14 +1,6 @@
 <app-header></app-header>
+<div class="summaryContainer">
 
-<nav mat-tab-nav-bar [tabPanel]="tabPanel">
-    <a mat-tab-link routerLink="/profile/3/summary">Profile Details</a>
-    <a mat-tab-link routerLink="/profile/3/albums">User Albums</a>
-    <a mat-tab-link routerLink="/profile/3/posts">Posts</a>
-</nav>
-<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-<div>
-    <h1>{{data.name}} (@{{data.username}})</h1>
-</div>
 <div>
 
     <div class="card mb-3" style="max-width: 100%;">
@@ -26,7 +18,7 @@
                         </tr>
                         <!-- <p class="card-title">{{data.email}} {{data.phone}}</p> -->
                         <tr>
-                            <td><b>Company Name :</b> {{ data.company.name}}</td>
+                            <td><b>Company Name :</b> {{ data.company}}</td>
                             <td><b>Website :</b> {{ data.website}}</td>
                         </tr>
                         <tr>
@@ -44,6 +36,8 @@
         </div>
     </div>
 
+</div>
 
 
-    <app-footer></app-footer>
+
+<app-footer></app-footer>

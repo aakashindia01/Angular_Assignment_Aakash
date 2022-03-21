@@ -18,7 +18,9 @@ export class AlbumsComponent implements OnInit {
   ngOnInit(): void {
     this.id= this.route.snapshot.params['id'];
     this.getAlbums();
+    
   }
+
 
   getAlbums(){
     this.usersService.getAlbums(this.id).subscribe(data=>{

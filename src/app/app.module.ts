@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchPipe } from './pipes/search.pipe';
+import {FilterPipe} from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     LoginComponent,
     NotFoundComponent,
+    SearchPipe,
+    FilterPipe,
 
   ],
   imports: [

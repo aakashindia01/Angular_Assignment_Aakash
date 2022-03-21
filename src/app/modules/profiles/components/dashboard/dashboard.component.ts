@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../../../services/users.service';
 
 
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,8 +12,9 @@ import { UsersService } from '../../../../services/users.service';
 export class DashboardComponent implements OnInit {
 
   users:any;
+  searchValue: string ='';
   constructor(private usersService: UsersService){}
-
+ 
   
 
   ngOnInit(): void {

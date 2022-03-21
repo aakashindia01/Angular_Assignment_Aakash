@@ -81,6 +81,8 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "Angular_Assignment_Aakash:build"
+            
+            
           }
         },
         "test": {

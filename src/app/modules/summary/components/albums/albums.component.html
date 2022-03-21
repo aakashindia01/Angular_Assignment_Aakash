@@ -1,15 +1,13 @@
 <app-header></app-header>
-
-<nav mat-tab-nav-bar [tabPanel]="tabPanel">
-    <a mat-tab-link routerLink="/profile/3/summary">Profile Details</a>
-    <a mat-tab-link routerLink="/profile/3/albums">User Albums</a>
-    <a mat-tab-link routerLink="/profile/3/posts">Posts</a>
-  </nav>
-  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-<div>
-  <h1>Albums</h1>
-  <pre>{{data|json}}</pre>
+<div class="summaryContainer" fxLayout="row wrap" fxLayoutGap="10px">
+  
+  <div class="card" fxFlex="31%" fxFlex.sm="48%"  fxFlex.xs="100%" *ngFor="let data of data">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <p class="card-text">{{data.title}}</p>
+    </div>
+  </div>
 </div>
 <div>
-
+</div>
 <app-footer></app-footer>

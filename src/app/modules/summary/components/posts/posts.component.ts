@@ -18,6 +18,7 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.id= this.route.snapshot.params['id'];
     this.getPosts();
+   
   }
 
   getPosts(){
@@ -25,5 +26,6 @@ export class PostsComponent implements OnInit {
       this.data = data;
     })
   }
+
   
 }

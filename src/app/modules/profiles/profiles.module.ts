@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {FormsModule}  from '@angular/forms'
 import { ProfilesRoutingModule } from './profiles-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,7 +10,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ProfileComponent } from './components/profile/profile.component';
+
+
+
 
 
 @NgModule({
@@ -18,7 +20,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    ProfileComponent
+ 
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     FlexLayoutModule,
     MatButtonModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule,
+
   ]
 })
 export class ProfilesModule { }

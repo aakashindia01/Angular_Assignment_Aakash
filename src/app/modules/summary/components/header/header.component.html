@@ -9,7 +9,7 @@
 
       <ul class="nav justify-content-end">
         <li class="nav-item" routerLinkActive="active">
-            <a  class="nav-link navbar-brand" >Hello, Aakash</a>
+            <a  class="nav-link navbar-brand" >Hello, {{oneUser.name}}</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a routerLink="../login" class="nav-link navbar-brand" href="#" (click)="logout()">Logout</a>
@@ -17,3 +17,19 @@
       </ul>
     </div>
 </nav>
+
+<div class="heading">
+  <h1 style="display: inline;">{{oneUser.name}} </h1> <h3 style="display: inline;">  (@{{oneUser.username}})</h3>
+</div>
+
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <!-- <a mat-tab-link routerLink="/profile/{{oneUser._id}}/summary">Profile Details</a>
+  <a mat-tab-link routerLink="/profile/{{oneUser._id}}/albums">User Albums</a>
+  <a mat-tab-link routerLink="/profile/{{oneUser._id}}/posts">Posts</a> -->
+  <a mat-tab-link routerLink="/profile/{{oneUser.id}}/summary">Profile Details</a>
+  <a mat-tab-link routerLink="/profile/{{oneUser.id}}/albums">User Albums</a>
+  <a mat-tab-link routerLink="/profile/{{oneUser.id}}/posts">Posts</a>
+</nav>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+
+
