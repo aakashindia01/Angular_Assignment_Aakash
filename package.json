@@ -2,12 +2,13 @@
   "name": "angular-assignment-aakash",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "heroku-postbuild": "ng build --prod"
+    
+    "test": "ng test"
+    
   },
   "private": true,
   "dependencies": {
