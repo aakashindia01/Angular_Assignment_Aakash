@@ -16,6 +16,7 @@ const routes: Routes = [
   .then((m)=>m.ProfilesModule),},
 
   {path:'profile/:id', 
+  canActivate:[AuthGuard],
   loadChildren: ()=> 
   import('./modules/summary/summary.module')
   .then((m)=>m.SummaryModule),},

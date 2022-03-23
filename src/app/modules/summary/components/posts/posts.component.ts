@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
+import { LoadingService } from 'src/app/services/loading.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -9,8 +10,11 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class PostsComponent implements OnInit {
 
+  loading$ = this.loader.loading$;
+
   constructor(private route:ActivatedRoute,
-    private usersService:UsersService) { }
+    private usersService:UsersService,
+    public loader:LoadingService) { }
 
   id:any;
   data:any;

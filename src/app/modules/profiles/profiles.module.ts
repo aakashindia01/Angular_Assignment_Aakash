@@ -11,6 +11,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -33,6 +34,8 @@ import { FilterPipe } from 'src/app/pipes/filter.pipe';
     MatMenuModule,
     MatTabsModule,
     FormsModule,
+    MatProgressSpinnerModule
+
 
   ]
 })

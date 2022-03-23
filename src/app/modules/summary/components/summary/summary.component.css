@@ -37,3 +37,12 @@
     padding: 25px;
     margin-left: 30px;
 }
+
+mat-progress-spinner{
+  position: relative;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+

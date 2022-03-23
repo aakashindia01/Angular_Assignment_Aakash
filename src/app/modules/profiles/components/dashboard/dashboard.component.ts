@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../../../services/users.service';
+import { User } from 'src/app/interfaces/user';
+import { LoadingService } from 'src/app/services/loading.service';
 
 
 
@@ -14,9 +16,12 @@ import { UsersService } from '../../../../services/users.service';
 })
 export class DashboardComponent implements OnInit {
 
+  loading$ = this.loader.loading$;
+
   users:any;
   searchValue: string ='';
-  constructor(private usersService: UsersService){}
+  constructor(private usersService: UsersService,
+    public loader: LoadingService){}
  
   
 

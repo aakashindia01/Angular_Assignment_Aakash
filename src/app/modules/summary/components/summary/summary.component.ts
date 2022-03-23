@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoadingService } from 'src/app/services/loading.service';
 import {UsersService} from '../../../../services/users.service';
 
 @Component({
@@ -8,12 +9,13 @@ import {UsersService} from '../../../../services/users.service';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
-
+  loading$ = this.loader.loading$
 data:any
   id:any
 
   constructor(private route:ActivatedRoute,
-    private usersService:UsersService) { }
+    private usersService:UsersService,
+    public loader:LoadingService) { }
 
   ngOnInit(): void {
     this.id= this.route.snapshot.params['id'];

@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <ul class="nav justify-content-start" >
             <li class="nav-item" routerLinkActive="active">
-              <a  class="nav-link navbar-brand" href="#">Home</a>
+              <a  class="nav-link navbar-brand" routerLink="/profiles">Home</a>
             </li>
           </ul>
 
@@ -23,12 +23,12 @@
 </div>
 
 <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-  <!-- <a mat-tab-link routerLink="/profile/{{oneUser._id}}/summary">Profile Details</a>
+  <a mat-tab-link routerLink="/profile/{{oneUser._id}}/summary">Profile Details</a>
   <a mat-tab-link routerLink="/profile/{{oneUser._id}}/albums">User Albums</a>
-  <a mat-tab-link routerLink="/profile/{{oneUser._id}}/posts">Posts</a> -->
-  <a mat-tab-link routerLink="/profile/{{oneUser.id}}/summary">Profile Details</a>
+  <a mat-tab-link routerLink="/profile/{{oneUser._id}}/posts">Posts</a>
+  <!-- <a mat-tab-link routerLink="/profile/{{oneUser.id}}/summary">Profile Details</a>
   <a mat-tab-link routerLink="/profile/{{oneUser.id}}/albums">User Albums</a>
-  <a mat-tab-link routerLink="/profile/{{oneUser.id}}/posts">Posts</a>
+  <a mat-tab-link routerLink="/profile/{{oneUser.id}}/posts">Posts</a> -->
 </nav>
 <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 

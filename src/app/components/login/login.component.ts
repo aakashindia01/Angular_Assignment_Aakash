@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // faLock =faLock;
+
   loginForm=new FormGroup({
     email: new FormControl(''),
     password: new FormControl('')

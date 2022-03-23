@@ -1,23 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(user: any, searchValue:string) {
-    if(user.length===0 || searchValue===''){
-      return user;
+  transform(users: any, searchValue:string) {
+    if(users.length===0 || searchValue===''){
+      return users;
     }
-
-    const User =[];
-    for(const value of user){
-      if(value['name']===searchValue){
-        User.push(value);
-      }
+    return users.filter((user:any) => {
+      return(user.name.toLowerCase().match(searchValue.toLowerCase()) ||
+      user.email.toLowerCase().match(searchValue.toLowerCase()) ||
+      user.company.toLowerCase().match(searchValue.toLowerCase()));
+    });
     }
-    return User;
-   
   }
 
-}
